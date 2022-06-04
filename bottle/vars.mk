@@ -22,6 +22,5 @@ TARGET_SUPPORTS_ADAPTIVE_CHARGING := true
 endif
 
 # General Included
-$(call inherit-product, vendor/oneplus/camera/Camera.mk)
 $(call inherit-product, device/oneplus/sm8250-common/bottle/custom/custom.mk)
 $(call inherit-product, device/oneplus/sm8250-common/bottle/needed/needed.mk)
