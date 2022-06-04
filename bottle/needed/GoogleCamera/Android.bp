@@ -7,4 +7,5 @@ android_app_import {
 		enabled: false,
 	},
 	product_specific: true,
+	overrides: ["Camera2", "Gallery2", "Camera"],
 }

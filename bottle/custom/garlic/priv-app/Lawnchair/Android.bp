@@ -6,5 +6,5 @@ android_app_import {
         enabled: false,
     },
     privileged: true,
-	overrides: ["ParanoidQuickStep", "Launcher3QuickStep", "PixelLauncher", "TrebuchetQuickStep"],
+	overrides: ["ParanoidQuickStep", "Launcher3QuickStep", "PixelLauncher", "TrebuchetQuickStep", "Launcher3", "Launcher3Go", "Launcher3QuickStepGo", "NexusLauncherRelease"],
 }
