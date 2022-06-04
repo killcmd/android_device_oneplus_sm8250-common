@@ -1,0 +1,10 @@
+android_app_import {
+	name: "GoogleCamera",
+	apk: "GoogleCamera.apk",
+    presigned: true,
+    privileged: true,
+	dex_preopt: {
+		enabled: false,
+	},
+	product_specific: true,
+}

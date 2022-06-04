@@ -1,3 +1,4 @@
 PRODUCT_PACKAGES += \
 TouchGestures\
-DeviceSettings
+DeviceSettings\
+GoogleCamera
