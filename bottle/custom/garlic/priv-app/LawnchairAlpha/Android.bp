@@ -1,5 +1,5 @@
 android_app_import {
-    name: "Lawnchair",
+    name: "LawnchairAlpha",
     apk: "Lawnchair.apk",
     presigned: true,
     dex_preopt: {
