@@ -17,7 +17,7 @@
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           android:sharedUserId="android.uid.system"
-          package="org.aospextended.device.DeviceSettings"
+          package="org.spark.device.DeviceSettings"
           android:versionCode="2"
           android:versionName="2.0" >
 
@@ -74,7 +74,7 @@
         <activity android:name=".KeyHandler" />
 
         <receiver
-            android:name="org.aospextended.device.DeviceSettings.Startup" 
+            android:name="org.spark.device.DeviceSettings.Startup" 
             android:defaultToDeviceProtectedStorage="true"
             android:directBootAware="true"
             android:enabled="true">
@@ -85,7 +85,7 @@
 
         <!-- DeviceSettings Tile -->
         <service
-            android:name="org.aospextended.device.DeviceSettings.DeviceSettingsTileService"
+            android:name="org.spark.device.DeviceSettings.DeviceSettingsTileService"
             android:icon="@drawable/ic_settings_device_qs"
             android:label="@string/device_title"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -97,7 +97,7 @@
 
         <!-- Dolby Tile -->
         <service
-            android:name="org.aospextended.device.DeviceSettings.DolbyTileService"
+            android:name="org.spark.device.DeviceSettings.DolbyTileService"
             android:icon="@drawable/ic_dolby"
             android:label="@string/enable_dolby_title"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -109,7 +109,7 @@
 
         <!-- DozeSettings Activity -->
         <activity
-            android:name="org.aospextended.device.DeviceSettings.doze.DozeSettingsActivity"
+            android:name="org.spark.device.DeviceSettings.doze.DozeSettingsActivity"
             android:exported="true"
             android:label="@string/ambient_display_title"
             android:launchMode="singleTask" >
@@ -120,13 +120,13 @@
         </activity>
 
         <!-- Doze Service -->
-		<service android:name="org.aospextended.device.DeviceSettings.doze.DozeService"
+		<service android:name="org.spark.device.DeviceSettings.doze.DozeService"
                  android:permission="OneplusDozeService">
         </service>
 
         <!-- DozeSettings Tile -->
          <service
-            android:name="org.aospextended.device.DeviceSettings.doze.DozeTileService"
+            android:name="org.spark.device.DeviceSettings.doze.DozeTileService"
             android:icon="@drawable/ic_eye"
             android:label="@string/ambient_display_gestures_title"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -137,12 +137,12 @@
         </service>
 
         <!-- HBM Service -->
-        <service android:name="org.aospextended.device.DeviceSettings.HBMModeService"
+        <service android:name="org.spark.device.DeviceSettings.HBMModeService"
                  android:exported="false" />
 
         <!-- HBM Tile -->
         <service
-            android:name="org.aospextended.device.DeviceSettings.HBMModeTileService"
+            android:name="org.spark.device.DeviceSettings.HBMModeTileService"
             android:icon="@drawable/ic_hbm_mode"
             android:label="@string/tile_hbm_mode"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -153,15 +153,15 @@
         </service>
 
         <!-- HBM Service -->
-        <service android:name="org.aospextended.device.DeviceSettings.HBMModeService"
+        <service android:name="org.spark.device.DeviceSettings.HBMModeService"
             android:exported="false" />
 
         <!-- Auto HBM Service -->
-        <service android:name="org.aospextended.device.DeviceSettings.AutoHBMService"
+        <service android:name="org.spark.device.DeviceSettings.AutoHBMService"
 		 android:exported="false" />
 
         <!-- FPS Info Service -->
-        <service android:name="org.aospextended.device.DeviceSettings.FPSInfoService"
+        <service android:name="org.spark.device.DeviceSettings.FPSInfoService"
                 android:exported="false">
         </service>
 
@@ -179,7 +179,7 @@
 
         <!-- Game Mode Tile -->
         <service
-            android:name="org.aospextended.device.DeviceSettings.GameModeTileService"
+            android:name="org.spark.device.DeviceSettings.GameModeTileService"
             android:icon="@drawable/ic_game_mode"
             android:label="@string/game_mode_title"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -191,7 +191,7 @@
 
         <!-- Edge Touch Tile -->
         <service
-            android:name="org.aospextended.device.DeviceSettings.EdgeTouchTileService"
+            android:name="org.spark.device.DeviceSettings.EdgeTouchTileService"
             android:icon="@drawable/ic_edge_touch"
             android:label="@string/edge_touch_title"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -204,7 +204,7 @@
         <!-- Search Indexing -->
         <provider
             android:name=".ConfigPanelSearchIndexablesProvider"
-            android:authorities="org.aospextended.device"
+            android:authorities="org.spark.device"
             android:multiprocess="false"
             android:grantUriPermissions="true"
             android:permission="android.permission.READ_SEARCH_INDEXABLES"
