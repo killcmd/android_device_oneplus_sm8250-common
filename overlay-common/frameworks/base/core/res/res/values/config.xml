@@ -26,7 +26,7 @@
     <!-- Names of the key handler classes -->
     <string-array name="config_deviceKeyHandlerClasses" translatable="false">
         <item>com.android.touch.gestures.KeyHandler</item>
-        <item>org.aospextended.device.DeviceSettings.KeyHandler</item>
+        <item>org.spark.device.DeviceSettings.KeyHandler</item>
     </string-array>
 
     <!-- Whether device has physical tri state switch -->
