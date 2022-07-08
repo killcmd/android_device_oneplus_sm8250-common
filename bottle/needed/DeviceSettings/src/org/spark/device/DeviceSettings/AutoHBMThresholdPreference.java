@@ -15,14 +15,14 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.spark.device.DeviceSettings;
+package com.killcmd.device.DeviceSettings;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.AttributeSet;
 import androidx.preference.PreferenceManager;
-import org.spark.device.DeviceSettings.CustomSeekBarPreference;
+import com.killcmd.device.DeviceSettings.CustomSeekBarPreference;
 
 public class AutoHBMThresholdPreference extends CustomSeekBarPreference {
 

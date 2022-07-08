@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.spark.device.DeviceSettings;
+package com.killcmd.device.DeviceSettings;
 
 import android.content.Context;
 import android.content.Intent;

@@ -1,4 +1,4 @@
-package org.spark.device.DeviceSettings;
+package com.killcmd.device.DeviceSettings;
 
 import android.app.KeyguardManager;
 import android.app.Service;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.spark.device.DeviceSettings;
+package com.killcmd.device.DeviceSettings;
 
 import android.app.Service;
 import android.content.BroadcastReceiver;

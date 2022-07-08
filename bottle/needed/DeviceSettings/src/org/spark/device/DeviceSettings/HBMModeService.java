@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.spark.device.DeviceSettings;
+package com.killcmd.device.DeviceSettings;
 
 import android.app.Service;
 import android.content.BroadcastReceiver;
@@ -24,7 +24,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.IBinder;
 
-import org.spark.device.DeviceSettings.HBMModeSwitch;
+import com.killcmd.device.DeviceSettings.HBMModeSwitch;
 
 public class HBMModeService extends Service {
 

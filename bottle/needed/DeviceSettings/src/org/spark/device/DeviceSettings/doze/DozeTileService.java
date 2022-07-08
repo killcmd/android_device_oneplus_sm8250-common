@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.spark.device.DeviceSettings.doze;
+package com.killcmd.device.DeviceSettings.doze;
 
 import android.annotation.TargetApi;
 import android.content.Intent;

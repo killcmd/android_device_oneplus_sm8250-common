@@ -15,16 +15,16 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  *
  */
-package org.spark.device.DeviceSettings;
+package com.killcmd.device.DeviceSettings;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.SeekBar;
 import android.widget.Toast;
-import org.spark.device.DeviceSettings.CustomSeekBarPreference;
+import com.killcmd.device.DeviceSettings.CustomSeekBarPreference;
 
-import org.spark.device.DeviceSettings.R;
+import com.killcmd.device.DeviceSettings.R;
 
 public class VibratorStrengthPreference extends CustomSeekBarPreference {
 

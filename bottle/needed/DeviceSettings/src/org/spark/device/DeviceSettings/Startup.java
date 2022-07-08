@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.spark.device.DeviceSettings;
+package com.killcmd.device.DeviceSettings;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -24,7 +24,7 @@ import android.content.SharedPreferences;
 import android.provider.Settings;
 import androidx.preference.PreferenceManager;
 
-import org.spark.device.DeviceSettings.DolbySwitch;
+import com.killcmd.device.DeviceSettings.DolbySwitch;
 
 public class Startup extends BroadcastReceiver {
 
@@ -62,7 +62,7 @@ public class Startup extends BroadcastReceiver {
             dolbySwitch.setEnabled(false);
             sharedPrefs.edit().putBoolean(ONE_TIME_DOLBY, true).apply();
         }
-        org.spark.device.DeviceSettings.doze.Utils.checkDozeService(context);
+        com.killcmd.device.DeviceSettings.doze.Utils.checkDozeService(context);
         DeviceSettings.restoreVibStrengthSetting(context);
     }
 

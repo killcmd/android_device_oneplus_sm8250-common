@@ -1,4 +1,4 @@
-package org.spark.device.DeviceSettings;
+package com.killcmd.device.DeviceSettings;
 
 import android.annotation.TargetApi;
 import android.content.ComponentName;

@@ -1,4 +1,4 @@
-package org.spark.device.DeviceSettings;
+package com.killcmd.device.DeviceSettings;
 
 import android.annotation.TargetApi;
 import android.content.SharedPreferences;
@@ -6,7 +6,7 @@ import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
 import androidx.preference.PreferenceManager;
 
-import org.spark.device.DeviceSettings.DeviceSettings;
+import com.killcmd.device.DeviceSettings.DeviceSettings;
 
 @TargetApi(24)
 public class EdgeTouchTileService extends TileService {

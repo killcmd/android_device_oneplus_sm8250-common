@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.spark.device.DeviceSettings;
+package com.killcmd.device.DeviceSettings;
 
 import android.annotation.TargetApi;
 import android.content.BroadcastReceiver;
@@ -65,7 +65,7 @@ public class HBMModeTileService extends TileService {
         Utils.writeValue(HBMModeSwitch.getFile(), enabled ? "0" : "5");
         if (!enabled) {
             mHbmIntent = new Intent(this,
-                    org.spark.device.DeviceSettings.HBMModeService.class);
+                    com.killcmd.device.DeviceSettings.HBMModeService.class);
             this.startService(mHbmIntent);
         }
         updateState();

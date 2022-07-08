@@ -1,5 +1,5 @@
 android_app {
-    name: "TouchGestures",
+    name: "OOSTouchGestures",
     // Include SettingsLib and it's dependencies
     defaults: ["SettingsLibDefaults"],
     srcs: ["src/**/*.java"],
