@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.android.touch.gestures.utils;
+package com.killcmd.touch.gestures.utils;
 
 import android.content.res.Resources;
 import android.util.Log;
@@ -33,7 +33,7 @@ public class ResourceUtils {
     public static String getStringForResourceName(final Resources res,
                                                   final String resourceName,
                                                   final String defaultValue) {
-        final int resId = res.getIdentifier(resourceName, "string", "com.android.touch.gestures");
+        final int resId = res.getIdentifier(resourceName, "string", "com.killcmd.touch.gestures");
         if (resId <= 0) {
             Log.e(TAG, "No resource found for " + resourceName);
             return defaultValue;

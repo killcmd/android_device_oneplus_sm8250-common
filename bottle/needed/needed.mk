@@ -1,4 +1,4 @@
 PRODUCT_PACKAGES += \
-TouchGestures\
+OOSTouchGestures\
 DeviceSettings\
 GoogleCamera

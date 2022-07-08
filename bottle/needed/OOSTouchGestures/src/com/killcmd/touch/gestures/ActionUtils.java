@@ -1,4 +1,4 @@
-package com.android.touch.gestures;
+package com.killcmd.touch.gestures;
 
 import android.app.KeyguardManager;
 import android.content.Context;
@@ -62,7 +62,7 @@ public class ActionUtils {
         KeyguardManager km = (KeyguardManager) context.getSystemService(Context.KEYGUARD_SERVICE);
         if (km.isKeyguardLocked()){
             intent = new Intent();
-            intent.setClassName("com.android.touch.gestures", "com.android.touch.gestures.ScreenOffLaunchGestureActivity");
+            intent.setClassName("com.killcmd.touch.gestures", "com.killcmd.touch.gestures.ScreenOffLaunchGestureActivity");
             intent.putExtra(ScreenOffLaunchGestureActivity.ACTION_KEY, action);
         }
         startActivitySafely(context, intent);

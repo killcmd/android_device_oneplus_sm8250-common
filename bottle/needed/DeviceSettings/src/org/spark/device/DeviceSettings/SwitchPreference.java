@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.spark.device.DeviceSettings;
+package com.killcmd.device.DeviceSettings;
 
 import android.content.Context;
 import android.os.VibrationEffect;
@@ -24,7 +24,7 @@ import android.view.View;
 import androidx.core.content.res.TypedArrayUtils;
 import androidx.preference.R;
 
-import org.spark.device.DeviceSettings.VibrationUtils;
+import com.killcmd.device.DeviceSettings.VibrationUtils;
 
 public class SwitchPreference extends androidx.preference.SwitchPreference {
 

@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.spark.device.DeviceSettings;
+package com.killcmd.device.DeviceSettings;
 
 import android.app.ActivityManager;
 import android.content.ComponentName;
@@ -37,13 +37,13 @@ import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.TwoStatePreference;
-import org.spark.device.DeviceSettings.CustomSeekBarPreference;
-import org.spark.device.DeviceSettings.SwitchPreference;
+import com.killcmd.device.DeviceSettings.CustomSeekBarPreference;
+import com.killcmd.device.DeviceSettings.SwitchPreference;
 
-import org.spark.device.DeviceSettings.DolbySwitch;
-import org.spark.device.DeviceSettings.FileUtils;
-import org.spark.device.DeviceSettings.FPSInfoService;
-import org.spark.device.DeviceSettings.doze.DozeSettingsActivity;
+import com.killcmd.device.DeviceSettings.DolbySwitch;
+import com.killcmd.device.DeviceSettings.FileUtils;
+import com.killcmd.device.DeviceSettings.FPSInfoService;
+import com.killcmd.device.DeviceSettings.doze.DozeSettingsActivity;
 
 import com.qualcomm.qcrilmsgtunnel.IQcrilMsgTunnel;
 
@@ -246,7 +246,7 @@ public class DeviceSettings extends PreferenceFragment
             Boolean enabled = (Boolean) newValue;
             Utils.writeValue(HBMModeSwitch.getFile(), enabled ? "5" : "0");
             Intent hbmIntent = new Intent(this.getContext(),
-                    org.spark.device.DeviceSettings.HBMModeService.class);
+                    com.killcmd.device.DeviceSettings.HBMModeService.class);
             if (enabled) {
                 this.getContext().startService(hbmIntent);
             } else {

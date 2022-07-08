@@ -15,11 +15,11 @@
  * limitations under the License.
  */
 
-package com.android.touch.gestures;
+package com.killcmd.touch.gestures;
 
 class TouchscreenGestureConstants {
     // Broadcast action for settings update
-    static final String UPDATE_PREFS_ACTION = "com.android.touch.gestures.UPDATE_SETTINGS";
+    static final String UPDATE_PREFS_ACTION = "com.killcmd.touch.gestures.UPDATE_SETTINGS";
     // Broadcast extra: keycode mapping (int[]: key = gesture ID, value = keycode)
     static final String UPDATE_EXTRA_KEYCODE_MAPPING = "keycode_mappings";
     // Broadcast extra: assigned actions (int[]: key = gesture ID, value = action)

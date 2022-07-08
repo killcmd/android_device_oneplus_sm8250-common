@@ -17,7 +17,7 @@
 *
 */
 
-package org.spark.device.DeviceSettings;
+package com.killcmd.device.DeviceSettings;
 
 import android.content.Context;
 import android.media.AudioManager;

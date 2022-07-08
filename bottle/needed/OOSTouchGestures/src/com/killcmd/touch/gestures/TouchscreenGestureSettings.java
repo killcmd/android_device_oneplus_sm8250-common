@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.android.touch.gestures;
+package com.killcmd.touch.gestures;
 
 import android.app.ActionBar;
 import android.app.Fragment;
@@ -37,8 +37,8 @@ import androidx.preference.PreferenceManager;
 import com.android.internal.custom.hardware.LineageHardwareManager;
 import com.android.internal.custom.hardware.TouchscreenGesture;
 
-import com.android.touch.gestures.R;
-import com.android.touch.gestures.utils.ResourceUtils;
+import com.killcmd.touch.gestures.R;
+import com.killcmd.touch.gestures.utils.ResourceUtils;
 
 import java.lang.System;
 

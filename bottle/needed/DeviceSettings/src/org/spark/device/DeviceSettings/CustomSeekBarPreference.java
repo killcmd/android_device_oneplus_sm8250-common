@@ -15,7 +15,7 @@
  * limitations under the License
  */
 
-package org.spark.device.DeviceSettings;
+package com.killcmd.device.DeviceSettings;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -34,8 +34,8 @@ import android.widget.Toast;
 import androidx.core.content.res.TypedArrayUtils;
 import androidx.preference.*;
 
-import org.spark.device.DeviceSettings.R;
-import org.spark.device.DeviceSettings.VibrationUtils;
+import com.killcmd.device.DeviceSettings.R;
+import com.killcmd.device.DeviceSettings.VibrationUtils;
 
 public class CustomSeekBarPreference extends Preference implements SeekBar.OnSeekBarChangeListener,
         View.OnClickListener, View.OnLongClickListener {

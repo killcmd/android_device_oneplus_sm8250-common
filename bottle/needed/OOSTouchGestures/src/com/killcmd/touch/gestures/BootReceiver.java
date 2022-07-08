@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.touch.gestures;
+package com.killcmd.touch.gestures;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -23,7 +23,7 @@ import android.content.SharedPreferences;
 
 import androidx.preference.PreferenceManager;
 
-import com.android.touch.gestures.TouchscreenGestureSettings;
+import com.killcmd.touch.gestures.TouchscreenGestureSettings;
 
 public class BootReceiver extends BroadcastReceiver {
 

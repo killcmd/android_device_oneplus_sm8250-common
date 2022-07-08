@@ -15,14 +15,14 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.spark.device.DeviceSettings;
+package com.killcmd.device.DeviceSettings;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 
-import org.spark.device.DeviceSettings.DeviceSettings;
+import com.killcmd.device.DeviceSettings.DeviceSettings;
 
 public class DCModeSwitch implements OnPreferenceChangeListener {
 

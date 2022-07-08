@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.android.touch.gestures;
+package com.killcmd.touch.gestures;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

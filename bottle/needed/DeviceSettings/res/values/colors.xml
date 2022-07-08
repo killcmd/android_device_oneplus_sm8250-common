@@ -15,4 +15,7 @@
 -->
 <resources>
     <color name="disabled_text_color">#66000000</color>
+	
+	 <!-- Settings Homepage Stupidity -->
+    <color name="wave_homepage_icon_background">#f7f7f7</color>
 </resources>

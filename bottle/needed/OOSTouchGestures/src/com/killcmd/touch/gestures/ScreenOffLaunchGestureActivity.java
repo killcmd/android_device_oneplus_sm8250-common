@@ -1,4 +1,4 @@
-package com.android.touch.gestures;
+package com.killcmd.touch.gestures;
 
 import android.app.Activity;
 import android.app.KeyguardManager;

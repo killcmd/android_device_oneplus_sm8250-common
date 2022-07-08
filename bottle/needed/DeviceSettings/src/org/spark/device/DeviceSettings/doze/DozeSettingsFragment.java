@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.spark.device.DeviceSettings.doze;
+package com.killcmd.device.DeviceSettings.doze;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -32,12 +32,12 @@ import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceFragment;
-import org.spark.device.DeviceSettings.SwitchPreference;
+import com.killcmd.device.DeviceSettings.SwitchPreference;
 
 import com.android.settingslib.widget.MainSwitchPreference;
 import com.android.settingslib.widget.OnMainSwitchChangeListener;
 
-import org.spark.device.DeviceSettings.R;
+import com.killcmd.device.DeviceSettings.R;
 
 public class DozeSettingsFragment extends PreferenceFragment implements OnPreferenceChangeListener,
         OnMainSwitchChangeListener {

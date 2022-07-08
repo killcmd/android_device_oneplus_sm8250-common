@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.spark.device.DeviceSettings.doze;
+package com.killcmd.device.DeviceSettings.doze;
 
 import android.content.Context;
 import android.hardware.Sensor;
