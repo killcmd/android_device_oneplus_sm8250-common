@@ -5,6 +5,6 @@
 //
 
 runtime_resource_overlay {
-    name: "SparkSettingsResCommon",
+    name: "OpusSettingsResCommon",
     device_specific: true,
 }

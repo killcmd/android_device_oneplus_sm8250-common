@@ -5,6 +5,6 @@
 //
 
 runtime_resource_overlay {
-    name: "SparkSettingsProviderResCommon",
-    device_specific: true,
+    name: "OpusFrameworksResCommon",
+    vendor: true,
 }

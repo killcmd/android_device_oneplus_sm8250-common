@@ -309,10 +309,10 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
 	DeviceExtrasResCommon \
-    SparkFrameworksResCommon \
-    SparkSettingsProviderResCommon \
-    SparkSettingsResCommon \
-    SparkSystemUIResCommon \
+    OpusFrameworksResCommon \
+    OpusSettingsProviderResCommon \
+    OpusSettingsResCommon \
+    OpusSystemUIResCommon \
     FrameworksResTarget \
     OPlusFrameworksResCommon \
     OPlusSettingsResCommon \
