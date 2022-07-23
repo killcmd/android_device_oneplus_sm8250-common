@@ -16,7 +16,7 @@
 -->
 <resources>
     <!-- OPlus Extras -->
-    <string name="oplus_extras_title">OPlus Extras</string>
+    <string name="oplus_extras_title">Oneplus Extras</string>
     <string name="oplus_extras_summary">Adjust device specific settings</string>
     <string name="oplus_extras_warning_title">Warning</string>
     <string name="oplus_extras_warning_text">A majority of these features rely on specific kernel nodes in order to function. By flashing a custom kernel, you risk the possibility of losing access to some features. You have been warned!</string>
