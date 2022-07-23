@@ -118,11 +118,6 @@ PRODUCT_COPY_FILES += \
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
-# DeviceExtras
-PRODUCT_PACKAGES += \
-    DeviceExtras \
-    tri-state-key-calibrate
-
 # Device ID attestation
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml
@@ -310,7 +305,6 @@ $(call inherit-product, device/oneplus/sm8250-common/overlay/qssi/qssi.mk)
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
-	DeviceExtrasResCommon \
     SparkFrameworksResCommon \
     SparkSettingsProviderResCommon \
     SparkSettingsResCommon \
