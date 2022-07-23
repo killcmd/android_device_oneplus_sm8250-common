@@ -317,7 +317,8 @@ PRODUCT_PACKAGES += \
     OPlusExtrasResCommon \
     OPlusFrameworksResCommon \
     OPlusSettingsResCommon \
-    WifiResTarget
+    WifiResTarget \
+	ih8sn
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
