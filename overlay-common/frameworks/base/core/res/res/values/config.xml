@@ -19,14 +19,14 @@
 <resources>
   <!-- Paths to the libraries that contain device specific key handlers -->
     <string-array name="config_deviceKeyHandlerLibs" translatable="false">
-        <item>/system/system_ext/priv-app/TouchGestures/TouchGestures.apk</item>
-        <item>/system/system_ext/priv-app/DeviceSettings/DeviceSettings.apk</item>
+        <item>/system_ext/priv-app/TouchGestures/TouchGestures.apk</item>
+        <item>/system_ext/priv-app/DeviceSettings/DeviceSettings.apk</item>
     </string-array>
 
     <!-- Names of the key handler classes -->
     <string-array name="config_deviceKeyHandlerClasses" translatable="false">
-        <item>com.android.touch.gestures.KeyHandler</item>
-        <item>org.spark.device.DeviceSettings.KeyHandler</item>
+        <item>com.killcmd.touch.gestures.KeyHandler</item>
+        <item>com.killcmd.device.DeviceSettings.KeyHandler</item>
     </string-array>
 
     <!-- Whether device has physical tri state switch -->
