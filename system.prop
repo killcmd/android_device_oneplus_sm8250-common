@@ -65,10 +65,3 @@ persist.vendor.ssr.restart_level=ALL_ENABLE
 
 # Vendor
 ro.vendor.qti.va_aosp.support=1
-
-# Spark-OS
-ro.spark.device.name=OnePlus 8
-ro.spark.group.url=https://t.me/sparkos1plus8
-ro.spark.maintainer=Ferdinand Vasquez (killcmd)
-ro.spark.maintainer.username=i_used_to_be_cool
-
