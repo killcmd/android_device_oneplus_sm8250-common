@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The LineageOS Project
+ * Copyright (C) 2022 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,30 +14,30 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "vendor.lineage.touch@1.0-service.oneplus"
+#define LOG_TAG "vendor.lineage.touch@1.0-service.oplus"
 
 #include <android-base/logging.h>
-#include <binder/ProcessState.h>
 #include <hidl/HidlTransportSupport.h>
-#include <touch/oneplus/TouchscreenGesture.h>
+#include "TouchscreenGesture.h"
 
-using ::vendor::lineage::touch::V1_0::ITouchscreenGesture;
-using ::vendor::lineage::touch::V1_0::implementation::TouchscreenGesture;
+using android::sp;
+using android::hardware::configureRpcThreadpool;
+using android::hardware::joinRpcThreadpool;
+
+using vendor::lineage::touch::V1_0::ITouchscreenGesture;
+using vendor::lineage::touch::V1_0::implementation::TouchscreenGesture;
 
 int main() {
-    android::sp<ITouchscreenGesture> gestureService = new TouchscreenGesture();
+    sp<ITouchscreenGesture> gestureService = new TouchscreenGesture();
 
-    android::hardware::configureRpcThreadpool(1, true /*callerWillJoin*/);
+    configureRpcThreadpool(1, true /*callerWillJoin*/);
 
     if (gestureService->registerAsService() != android::OK) {
-        LOG(ERROR) << "Cannot register touchscreen gesture HAL service.";
+        LOG(ERROR) << "Can't register TouchscreenGesture HAL service";
         return 1;
     }
 
-    LOG(INFO) << "Touchscreen HAL service ready.";
+    joinRpcThreadpool();
 
-    android::hardware::joinRpcThreadpool();
-
-    LOG(ERROR) << "Touchscreen HAL service failed to join thread pool.";
-    return 1;
+    return 0;  // should never get here
 }

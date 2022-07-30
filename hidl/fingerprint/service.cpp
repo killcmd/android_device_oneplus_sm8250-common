@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2022 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,35 +14,30 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.biometrics.fingerprint@2.3-service"
+#define LOG_TAG "android.hardware.biometrics.fingerprint@2.3-service.oplus"
 
-#include <android/log.h>
-#include <hidl/HidlSupport.h>
+#include <android-base/logging.h>
 #include <hidl/HidlTransportSupport.h>
-#include <android/hardware/biometrics/fingerprint/2.3/IBiometricsFingerprint.h>
-#include <android/hardware/biometrics/fingerprint/2.1/types.h>
+
 #include "BiometricsFingerprint.h"
 
-using android::hardware::biometrics::fingerprint::V2_3::IBiometricsFingerprint;
-using android::hardware::biometrics::fingerprint::V2_3::implementation::BiometricsFingerprint;
+using android::sp;
 using android::hardware::configureRpcThreadpool;
 using android::hardware::joinRpcThreadpool;
-using android::sp;
+using android::hardware::biometrics::fingerprint::V2_3::IBiometricsFingerprint;
+using android::hardware::biometrics::fingerprint::V2_3::implementation::BiometricsFingerprint;
 
 int main() {
-    android::sp<IBiometricsFingerprint> bio = BiometricsFingerprint::getInstance();
+    sp<IBiometricsFingerprint> bio = new BiometricsFingerprint();
 
     configureRpcThreadpool(1, true /*callerWillJoin*/);
 
-    if (bio != nullptr) {
-        if (::android::OK != bio->registerAsService()) {
-            return 1;
-        }
-    } else {
-        ALOGE("Can't create instance of BiometricsFingerprint, nullptr");
+    if (bio->registerAsService() != android::OK) {
+        LOG(ERROR) << "Can't register BiometricsFingerprint HAL service";
+        return 1;
     }
 
     joinRpcThreadpool();
 
-    return 0; // should never get here
+    return 0;  // should never get here
 }

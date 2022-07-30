@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019-2021 The LineageOS Project
+ * Copyright (C) 2022 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,12 +14,22 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "TouchscreenGestureService"
+#define LOG_TAG "vendor.lineage.touch@1.0-service.oplus"
 
-#include <touch/oneplus/TouchscreenGesture.h>
-#include "touch/oneplus/TouchscreenGestureConfig.h"
-#include <android-base/logging.h>
-#include <fstream>
+#include <android-base/file.h>
+#include <android-base/strings.h>
+
+#include <TouchscreenGestureConfig.h>
+
+using ::android::base::ReadFileToString;
+using ::android::base::Trim;
+using ::android::base::WriteStringToFile;
+
+namespace {
+
+constexpr const char* kGestureEnableIndepPath = "/proc/touchpanel/double_tap_enable_indep";
+
+}  // anonymous namespace
 
 namespace vendor {
 namespace lineage {
@@ -30,27 +40,32 @@ namespace implementation {
 Return<void> TouchscreenGesture::getSupportedGestures(getSupportedGestures_cb resultCb) {
     std::vector<Gesture> gestures;
 
-    for (const auto& entry : kGestureInfoMap) {
-        if (access(entry.second.path, F_OK) != -1) {
-            gestures.push_back({entry.first, entry.second.name, entry.second.keycode});
+    for (const auto& [id, name] : kGestureNames) {
+        if (kSupportedGestures & (1 << id)) {
+            gestures.push_back({static_cast<int>(gestures.size()), name, kGestureStartKey + id});
         }
     }
+
     resultCb(gestures);
 
     return Void();
 }
 
-Return<bool> TouchscreenGesture::setGestureEnabled(
-    const ::vendor::lineage::touch::V1_0::Gesture& gesture, bool enabled) {
-    const auto entry = kGestureInfoMap.find(gesture.id);
-    if (entry == kGestureInfoMap.end()) {
-        return false;
+Return<bool> TouchscreenGesture::setGestureEnabled(const Gesture& gesture, bool enabled) {
+    std::string tmp;
+    int contents = 0;
+
+    if (ReadFileToString(kGestureEnableIndepPath, &tmp)) {
+        contents = std::stoi(Trim(tmp), nullptr, 16);
     }
 
-    std::ofstream file(entry->second.path);
-    file << (enabled ? "1" : "0");
-    LOG(DEBUG) << "Wrote file " << entry->second.path << " fail " << file.fail();
-    return !file.fail();
+    if (enabled) {
+        contents |= (1 << (gesture.keycode - kGestureStartKey));
+    } else {
+        contents &= ~(1 << (gesture.keycode - kGestureStartKey));
+    }
+
+    return WriteStringToFile(std::to_string(contents), kGestureEnableIndepPath, true);
 }
 
 }  // namespace implementation

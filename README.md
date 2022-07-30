@@ -1,1 +1,0 @@
-# android_device_oneplus_sm8250-common
